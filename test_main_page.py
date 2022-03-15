@@ -1,5 +1,6 @@
 from .pages.main_page import MainPage
 from .pages.login_page import LoginPage
+from .pages.basket_page import BasketPage
 
 link = "http://selenium1py.pythonanywhere.com/"
 #link = "http://selenium1py.pythonanywhere.com/ru/catalogue/the-shellcoders-handbook_209/?promo=midsummer"
@@ -37,5 +38,11 @@ def test_guest_should_be_register_form(browser):
     login_page = LoginPage(browser, browser.current_url)
     login_page.should_be_register_form()
 
+def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
+    page = BasketPage(browser, link)
+    page.open()
+    page.go_to_basket()
+    page.basket_clean()
+    page.basket_clean_tx()
 
 

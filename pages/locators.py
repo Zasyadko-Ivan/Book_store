@@ -17,6 +17,8 @@ class ProductPageLocators():
     PRICE_BASKET = (By.XPATH, '//*[@id="messages"]/div[3]/div/p[1]/strong')
     NAME_BOOK = (By.XPATH, '//div[@class="col-sm-6 product_main"]/h1')
     PRICE_BOOK = (By.XPATH, '//*[@id="content_inner"]/article/div[1]/div[2]/p[1]')
+    CLEAN_BASKET = (By.XPATH, '//*[@id="content_inner"]/p/a')
+    CLEAN_BASKET_TX = (By.XPATH, '//p[contains(text(), "empty")]')
 
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
