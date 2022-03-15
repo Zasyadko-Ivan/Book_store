@@ -2,7 +2,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-chrome_link = "/Users/ivanzasadko/PycharmProjects/pythonProject/Blol_3/chromedriver/chromedriver"
+#chrome_link = "/Users/ivanzasadko/PycharmProjects/pythonProject/Blol_3/chromedriver/chromedriver"
 
 
 def pytest_addoption(parser):
@@ -16,7 +16,8 @@ def browser(request):
     print("\nstart chrome browser for test..")
     options = Options()
     options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
-    browser = webdriver.Chrome(options=options, executable_path=chrome_link)
+    #browser = webdriver.Chrome(options=options, executable_path=chrome_link)
+    browser = webdriver.Chrome(options=options)
     yield browser
     print("\nquit browser..")
     browser.quit()
