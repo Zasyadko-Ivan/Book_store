@@ -16,3 +16,4 @@ class MainPage(BasePage):
         link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
         link.click()
 
+
