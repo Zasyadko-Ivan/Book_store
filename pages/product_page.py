@@ -31,3 +31,13 @@ class ProductPage(BasePage):
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
+
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.NOTIFICATION_ADDED_TO_BASKET), \
+            "Success message is presented, but should not be"
+
+    def should_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.NOTIFICATION_ADDED_TO_BASKET), \
+            "Success message is not disappeared"
+
