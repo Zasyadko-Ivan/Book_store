@@ -1,7 +1,6 @@
 from .base_page import BasePage
 from selenium.webdriver.common.by import By
-from .locators import MainPageLocators
-from .login_page import LoginPage
+
 from .locators import ProductPageLocators
 from selenium.common.exceptions import NoAlertPresentException
 import math
@@ -40,4 +39,3 @@ class ProductPage(BasePage):
     def should_disappeared(self):
         assert self.is_disappeared(*ProductPageLocators.NOTIFICATION_ADDED_TO_BASKET), \
             "Success message is not disappeared"
-

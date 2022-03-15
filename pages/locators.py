@@ -18,3 +18,6 @@ class ProductPageLocators():
     NAME_BOOK = (By.XPATH, '//div[@class="col-sm-6 product_main"]/h1')
     PRICE_BOOK = (By.XPATH, '//*[@id="content_inner"]/article/div[1]/div[2]/p[1]')
 
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+
